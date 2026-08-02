@@ -1,0 +1,121 @@
+.page-container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.page-title {
+  text-align: center;
+  color: blue;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border: 1px solid blue;
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: darkblue;
+}
+
+.list-title {
+  margin-bottom: 15px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 700px;
+  /* border-collapse: collapse; */
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.data-table th {
+  background-color: blue;
+  color: white;
+}
+
+.edit-btn {
+  padding: 8px 15px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.edit-btn:hover {
+  background-color: darkorange;
+}
+
+.delete-btn {
+  padding: 8px 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    width: 95%;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .form input,
+  .form select,
+  .submit-btn {
+    width: 100%;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
