@@ -16,7 +16,9 @@ function Orders() {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/customers");
+      const response = await axios.get(
+        "https://sales-order-management-system-e9ah.onrender.com/customers",
+      );
       setCustomers(response.data);
     } catch (error) {
       console.log(error);
@@ -25,7 +27,9 @@ function Orders() {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/products");
+      const response = await axios.get(
+        "https://sales-order-management-system-e9ah.onrender.com/products",
+      );
       setProducts(response.data);
     } catch (error) {
       console.log(error);
@@ -34,7 +38,9 @@ function Orders() {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/orders");
+      const response = await axios.get(
+        "https://sales-order-management-system-e9ah.onrender.com/orders",
+      );
       setOrders(response.data);
     } catch (error) {
       console.log(error);
@@ -91,11 +97,17 @@ function Orders() {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/orders/${editingId}`, order);
+        await axios.put(
+          `https://sales-order-management-system-e9ah.onrender.com/orders/${editingId}`,
+          order,
+        );
 
         alert("Order updated successfully");
       } else {
-        await axios.post("http://localhost:5000/orders", order);
+        await axios.post(
+          "https://sales-order-management-system-e9ah.onrender.com/orders",
+          order,
+        );
 
         alert("Order placed successfully");
       }
@@ -118,7 +130,9 @@ function Orders() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/orders/${id}`);
+      await axios.delete(
+        `https://sales-order-management-system-e9ah.onrender.com/orders/${id}`,
+      );
 
       alert("Order deleted successfully");
 

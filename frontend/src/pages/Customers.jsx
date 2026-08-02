@@ -24,7 +24,9 @@ function Customers() {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/customers");
+      const response = await axios.get(
+        "https://sales-order-management-system-e9ah.onrender.com/customers",
+      );
 
       setCustomers(response.data);
     } catch (error) {
@@ -42,13 +44,16 @@ function Customers() {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/customers/${editingId}`,
+          `https://sales-order-management-system-e9ah.onrender.com/customers/${editingId}`,
           customer,
         );
 
         alert("Customer updated successfully");
       } else {
-        await axios.post("http://localhost:5000/customers", customer);
+        await axios.post(
+          "https://sales-order-management-system-e9ah.onrender.com/customers",
+          customer,
+        );
 
         alert("Customer added successfully");
       }
@@ -70,7 +75,9 @@ function Customers() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/customers/${id}`);
+      await axios.delete(
+        `https://sales-order-management-system-e9ah.onrender.com/customers/${id}`,
+      );
 
       alert("Customer deleted successfully");
 

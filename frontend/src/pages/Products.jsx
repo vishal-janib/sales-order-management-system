@@ -23,7 +23,9 @@ function Products() {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/products");
+      const response = await axios.get(
+        "https://sales-order-management-system-e9ah.onrender.com/products",
+      );
       setProducts(response.data);
     } catch (error) {
       console.log(error);
@@ -39,11 +41,17 @@ function Products() {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/products/${editingId}`, product);
+        await axios.put(
+          `https://sales-order-management-system-e9ah.onrender.com/products/${editingId}`,
+          product,
+        );
 
         alert("Product updated successfully");
       } else {
-        await axios.post("http://localhost:5000/products", product);
+        await axios.post(
+          "https://sales-order-management-system-e9ah.onrender.com/products",
+          product,
+        );
 
         alert("Product added successfully");
       }
@@ -76,7 +84,9 @@ function Products() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/products/${id}`);
+      await axios.delete(
+        `https://sales-order-management-system-e9ah.onrender.com/products/${id}`,
+      );
 
       alert("Product deleted successfully");
 
