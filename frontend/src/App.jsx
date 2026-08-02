@@ -4,7 +4,7 @@ import Products from "./pages/Products";
 import Orders from "./pages/Orders";
 import Navbar from "./components/Navbar";
 
-import "./app.css";
+import "./App.css";
 
 function App() {
   return (
